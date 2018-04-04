@@ -91,10 +91,16 @@ class format_fridayinstitute_renderer extends format_section_renderer_base {
         $currenttext = '';
         $sectionstyle = '';
         
-        if ($section->section = 0) {
-        }
-        else {
-        }
+        $o .= html_writer::start_tag('div', array('class'=>'section', 'id'=>'section-'.$section->section)); 
+        $o .= html_writer::div(get_section_name($course, $section));
+        
+        return $o;
+    }
+    protected function section_footer() {
+        global $PAGE;
+        global $create_panel_header;
+        
+        $o .= html_writer::end_tag('div');
         return $o;
     }
     
