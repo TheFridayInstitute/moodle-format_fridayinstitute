@@ -53,6 +53,7 @@ class format_fridayinstitute_renderer extends format_section_renderer_base {
      * Generate the starting container html for a list of sections
      * @return string HTML to output.
      */
+    //  maybe the grid would go here
     protected function start_section_list() {
         return html_writer::start_tag('ul', array('class' => 'fridayinstitute'));
     }
@@ -70,9 +71,33 @@ class format_fridayinstitute_renderer extends format_section_renderer_base {
      * @return string the page title
      */
     protected function page_title() {
-        return get_string('topicoutline');
+        //return get_string('topicoutline');
+        return "WHATS UP";
     }
+    /** Generate header of a section
+     *
+     * @param stdClass $section The course_section entry from DB
+     * @param stdClass $course The course entry from DB
+     * @param bool $onsectionpage true if being printed on a single-section page
+     * @param int $sectionreturn The section to return to after an action
+     * @return string HTML to output.
+     */
+    
+    protected function section_header($section, $course, $onsectionpage, $sectionreturn=null) {
+        global $PAGE;
+        global $create_panel_header;
 
+        $o = '';
+        $currenttext = '';
+        $sectionstyle = '';
+        
+        if ($section->section = 0) {
+        }
+        else {
+        }
+        return $o;
+    }
+    
     /**
      * Generate the section title, wraps it in a link to the section page if page is to be displayed on a separate page
      *
