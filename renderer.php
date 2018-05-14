@@ -71,8 +71,8 @@ class format_fridayinstitute_renderer extends format_section_renderer_base {
      * @return string the page title
      */
     protected function page_title() {
-        //return get_string('topicoutline');
-        return "WHATS UP";
+        return get_string('topicoutline');
+        //return "WHATS UP";
     }
     /** Generate header of a section
      *
@@ -82,7 +82,7 @@ class format_fridayinstitute_renderer extends format_section_renderer_base {
      * @param int $sectionreturn The section to return to after an action
      * @return string HTML to output.
      */
-    
+     
     protected function section_header($section, $course, $onsectionpage, $sectionreturn=null) {
         global $PAGE;
         global $create_panel_header;
@@ -103,7 +103,7 @@ class format_fridayinstitute_renderer extends format_section_renderer_base {
         $o .= html_writer::end_tag('div');
         return $o;
     }
-    
+     
     /**
      * Generate the section title, wraps it in a link to the section page if page is to be displayed on a separate page
      *
